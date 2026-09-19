@@ -25,6 +25,13 @@ python tool/build_privacy_page.py ../emergency-recorder-legal
 Não edite o `index.html` à mão. Duas cópias de um documento legal viram, com o tempo,
 duas políticas diferentes — e a que está publicada é a que vale para quem lê.
 
+## Não apague o arquivo de verificação
+
+`googleb14c453426e6868e.html` prova ao Google que este site é nosso. É o que permite
+a tela de consentimento OAuth exibir a marca do aplicativo. Ele não é gerado pelo
+script e não tem conteúdo útil — apagá-lo derruba a verificação silenciosamente, e o
+sintoma só aparece na próxima revisão do Google.
+
 ## Página publicada
 
 <https://alecgn.github.io/emergency-recorder-legal/>
