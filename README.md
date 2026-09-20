@@ -32,6 +32,13 @@ a tela de consentimento OAuth exibir a marca do aplicativo. Ele não é gerado p
 script e não tem conteúdo útil — apagá-lo derruba a verificação silenciosamente, e o
 sintoma só aparece na próxima revisão do Google.
 
+## Não apague os vídeos de demonstração
+
+`videos/FOREGROUND_SERVICE_CAMERA.mp4` e `videos/FOREGROUND_SERVICE_MICROPHONE.mp4` são os
+vídeos que a declaração de serviço em primeiro plano do Play Console aponta. Apagá-los ou
+renomeá-los quebra o link dessa declaração, e o sintoma só aparece quando a Play reanalisar
+o app. Para trocar um vídeo, substitua o arquivo **mantendo o nome**.
+
 ## Página publicada
 
 <https://alecgn.github.io/emergency-recorder-legal/>
