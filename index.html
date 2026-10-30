@@ -98,20 +98,31 @@ footer {
 <p><strong>O Emergency Recorder é um aplicativo Android que grava áudio e vídeo e envia cada
 gravação para a sua própria conta do Google Drive enquanto ela acontece.</strong></p>
 <p>Num gravador comum, o arquivo só existe no celular até você tocar em "parar". Se o
-aparelho for perdido, quebrado ou tomado antes disso, não sobra nada. Aqui, cada
-pedaço da gravação já está no seu Google Drive segundos depois de ter sido capturado —
-enquanto a gravação ainda está acontecendo.</p>
+aparelho for perdido, quebrado ou tomado antes disso, não sobra nada. Aqui, a gravação
+sobe enquanto acontece e vira arquivos no seu Google Drive: o primeiro trecho em 15
+segundos e, depois, um a cada 30. Se o celular sumir no meio, fica na nuvem tudo o que
+foi gravado até ali.</p>
 <h2>Como funciona</h2>
 <ol>
 <li>Você conecta a sua conta do Google Drive, uma vez.</li>
 <li>Toca em <strong>Gravar áudio</strong> ou <strong>Gravar vídeo</strong>. O envio começa sozinho.</li>
-<li>A tela mostra, o tempo todo, quanto já está no aparelho e quanto já chegou à nuvem.</li>
+<li>A tela mostra, o tempo todo, quanto já está no aparelho, quanto já foi enviado e
+   quanto já abre no Drive.</li>
 </ol>
+<p>Cada gravação ganha uma pasta própria no Drive. O primeiro trecho vira arquivo em 15
+segundos e, depois, um a cada 30 — cada parte abre sozinha, enquanto você ainda grava.</p>
 <p>Uma cópia fica sempre no celular, numa pasta que você encontra pelo gerenciador de
 arquivos. A nuvem não substitui o arquivo local: soma-se a ele.</p>
 <p>Se o aplicativo for encerrado no meio — bateria, sistema, queda — ele retoma o envio
 de onde parou na próxima abertura. Se você estiver sem internet, a gravação continua
 no aparelho e sobe sozinha quando a conexão voltar.</p>
+<h2>Contatos de segurança</h2>
+<p>Opcional. Cadastre até cinco pessoas de confiança. Quando uma gravação começa, o
+aplicativo compartilha a pasta dela no seu Drive com cada uma — só para leitura — e o
+próprio Google envia a elas um e-mail com o link. Elas acompanham os trechos enquanto
+você ainda está gravando.</p>
+<p>Os contatos precisam ter uma Conta do Google, e só devem ser cadastradas pessoas que
+concordaram em receber esses avisos.</p>
 <h2>Seus arquivos são seus</h2>
 <ul>
 <li>As gravações vão para a <strong>sua</strong> conta do Google Drive.</li>
@@ -128,11 +139,15 @@ arquivos no Drive de quem o usa.</p>
 <p>Ele pede <strong>apenas</strong> o escopo <code>drive.file</code>, que concede acesso somente aos arquivos e
 pastas criados pelo próprio aplicativo. Nenhum outro arquivo do seu Drive fica visível
 para ele — nem para listar.</p>
+<p>O mesmo escopo permite compartilhar, com os contatos de segurança que você cadastrar,
+a pasta de cada gravação que o próprio aplicativo criou. Nada além dessa pasta é
+compartilhado.</p>
 <h2>O que ele não faz</h2>
 <p>Um aplicativo honesto também precisa dizer o que não entrega:</p>
 <ul>
-<li><strong>Não aciona socorro.</strong> Ele grava; não chama a polícia nem o SAMU. Em uma
-  emergência real, ligue para os números de emergência da sua região.</li>
+<li><strong>Não aciona socorro.</strong> Ele grava; não chama a polícia nem o SAMU. Os contatos de
+  segurança recebem um link, não um alerta de emergência. Em uma emergência real, ligue
+  para os números de emergência da sua região.</li>
 <li><strong>Não grava às escondidas.</strong> Enquanto uma gravação acontece, há sempre uma
   notificação visível e um cronômetro na tela.</li>
 <li><strong>Não grava chamadas telefônicas.</strong></li>
@@ -150,6 +165,10 @@ para ele — nem para listar.</p>
 <p>Emergency Recorder is an Android app that records audio and video and uploads each
 recording to <strong>the user's own Google Drive account while the recording is still in
 progress</strong>, so that the material survives if the phone is lost, broken or taken.</p>
+<p>Each recording is uploaded in parts, each one a file that can be opened while the
+recording continues. Optionally, the user can register trusted contacts: when a
+recording starts, the app shares that recording's folder with them (read-only), and
+Google emails them the link.</p>
 <p>It requests only the <code>drive.file</code> OAuth scope, which grants access solely to files
 created by the app itself. There is no server of ours: the app talks directly to
 Google, and we never receive, store or access user recordings. No ads, no analytics,

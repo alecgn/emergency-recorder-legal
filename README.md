@@ -1,7 +1,8 @@
 # Emergency Recorder — documentos públicos
 
-Este repositório existe por um motivo só: **hospedar a política de privacidade** do
-aplicativo Emergency Recorder em uma URL pública, via GitHub Pages.
+Este repositório existe por um motivo só: **hospedar os documentos públicos** do
+aplicativo Emergency Recorder — página inicial, política de privacidade e termos de
+serviço — em uma URL pública, via GitHub Pages.
 
 O código do aplicativo é privado e fica em outro repositório. Aqui não há código —
 apenas a página publicada.
@@ -12,18 +13,27 @@ O GitHub Pages só funciona em repositórios públicos nas contas gratuitas. Tor
 repositório do aplicativo público apenas para publicar uma página seria expor o código
 inteiro por uma exigência de formulário.
 
-## Como a página é gerada
+## Como as páginas são geradas
 
-O texto é mantido em `docs/politica-de-privacidade.md`, **no repositório do
-aplicativo**, versionado junto com o código que ele descreve. O `index.html` deste
-repositório é gerado a partir dele:
+São três páginas — início, política de privacidade e termos de serviço —, as exigidas
+pela tela de consentimento OAuth do Google. O texto de cada uma é mantido em `docs/`,
+**no repositório do aplicativo**, versionado junto com o código que ele descreve:
+
+| Página | Origem |
+|---|---|
+| `index.html` | `docs/pagina-inicial.md` |
+| `privacidade.html` | `docs/politica-de-privacidade.md` |
+| `termos.html` | `docs/termos-de-servico.md` |
+
+Para gerar, a partir da raiz do repositório do aplicativo:
 
 ```
-python tool/build_privacy_page.py ../emergency-recorder-legal
+pip install markdown pillow
+python tool/build_site.py ../emergency-recorder-legal
 ```
 
-Não edite o `index.html` à mão. Duas cópias de um documento legal viram, com o tempo,
-duas políticas diferentes — e a que está publicada é a que vale para quem lê.
+Não edite os `.html` à mão. Duas cópias de um documento legal viram, com o tempo,
+dois documentos diferentes — e o que está publicado é o que vale para quem lê.
 
 ## Não apague o arquivo de verificação
 
